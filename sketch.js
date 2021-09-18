@@ -11,7 +11,7 @@ var pendulum1,pendulum2,pendulum3,pendulum4,pendulum5,sling1,sling2,sling3,sling
 
 
 function setup(){
-    createCanvas(windowWidth/2,windowHeight/2);
+    createCanvas(windowWidth-200,windowHeight);
     engine = Engine.create();
     world = engine.world;
 
@@ -23,17 +23,17 @@ function setup(){
     mConstraint = MouseConstraint.create(engine,options);
     World.add(world,mConstraint);
    
-    pendulum1 = new Pendulum(450,200,"black");
-    pendulum2 = new Pendulum(400,200,"white");
-    pendulum3 = new Pendulum(350,200,"black");
-    pendulum4 = new Pendulum(300,200,"white");
-    pendulum5 = new Pendulum(250,200,"black");
+  pendulum1 = new Pendulum(340,450,"black");
+    pendulum2 = new Pendulum(400,450,"white");
+    pendulum3 = new Pendulum(460,450,"black");
+    pendulum4 = new Pendulum(520,450,"white");
+    pendulum5 = new Pendulum(580,450,"black");
 
-    sling1= new Sling(pendulum1.body,{x:450,y:50});
-    sling2= new Sling(pendulum2.body,{x:400,y:50});
-    sling3= new Sling(pendulum3.body,{x:350,y:50});
-    sling4= new Sling(pendulum4.body,{x:300,y:50});
-    sling5= new Sling(pendulum5.body,{x:250,y:50});
+    sling1= new Sling(pendulum1.body,{x:340,y:200});
+    sling2= new Sling(pendulum2.body,{x:400,y:200});
+    sling3= new Sling(pendulum3.body,{x:460,y:200});
+    sling4= new Sling(pendulum4.body,{x:520,y:200});
+    sling5= new Sling(pendulum5.body,{x:580,y:200});
 }
 
 function draw(){
